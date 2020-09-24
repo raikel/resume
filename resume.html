@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="author" title="Raikel Bordón López" href="https://github.com/raikel">
+  <link href="styles/resume.css" rel="stylesheet">
+  <link href="styles/spacing.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.Cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <title>Raikel CV</title>
+  <meta name="description" content="Raikel CV">
+  <script type="text/javascript" src="https://unpkg.com/vue"></script>
+  <script type="text/javascript" src="data.js"></script>
+</head>
+
+<body>
+<div id="app">
+  <div style="page:portrait" class="section">
+    <div class="header flex-row ac pb-3 mb-5">
+      <img class="avatar mr-4" src="images/avatar.jpeg" alt="avatar">
+      <div>
+        <h1 class="title mb-2 primary">{{ fullName }}</h1>
+        <div class="text-sm">
+        <span class="mr-3">
+          <i class="fa fa-envelope"></i> {{ mailAddress }}
+        </span>
+        <span>
+          <i class="fa fa-calendar"></i> {{ birthDate }}
+        </span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="main">
+      
+      <!-- ========================= Profile ================================-->
+      
+      <h2>Profile summary</h2>
+      <p v-html="profileSummary" class="mt-3"></p>
+      
+      <!-- ========================= Work experience==========================-->
+  
+      <div class="mt-4">
+        <h2>Work experience</h2>
+        <div class="mt-3" v-for="(job, i) in workExperience" :key="i">
+          <div class="section-info text-sm grey-4">
+            <span class="mr-2">
+              <i class="fa fa-calendar"></i> {{ job.dateLimits }}
+            </span>
+              <span>
+              <i class="fa fa-map-marker"></i> {{ job.location }}
+            </span>
+          </div>
+          <h3 class="mt-2">{{ job.positionTitle }}</h3>
+          <h4 class="mt-1 grey-4">{{ job.companyName }}</h4>
+          <ul class="mt-2">
+            <li v-for="(work, j) in job.workDone" :key="j" v-html="work"></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- ========================= Skills =================================-->
+  
+      <div class="mt-4">
+        <h2>Skills</h2>
+    
+        <div v-if="!programming.hide" class="mt-3">
+          <h3>Programming languages</h3>
+          <table class="skills mt-3">
+            <tr v-for="(language, i) in programming.languages" :key="i" >
+              <td>{{ language.label }}</td>
+              <td>
+                <div class="skill-bar">
+                  <div class="skill-val bg-primary" :class="'w' + language.level"></div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    
+        <div v-for="(skills, i) in skillsTags" :key="i" class="mt-3">
+          <template v-if="!skills.hide">
+            <h3>{{ skills.title }}</h3>
+            <div class="tag-list mt-2">
+              <div v-for="(tag, j) in skills.tags" :key="j" class="tag bg-grey-1">
+                {{ tag }}
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+  
+      <!-- ========================= Research ===============================-->
+  
+      <div v-if="!researchWork.hide" class="mt-4">
+        <h2>Research Work</h2>
+        <ul class="mt-3">
+          <li v-for="(work, i) in researchWork.works" :key="i" v-html="work"></li>
+        </ul>
+      </div>
+      
+      <!-- ========================= Education ==============================-->
+      
+      <div class="mt-4">
+        <h2>Education</h2>
+        <div v-for="(degree, i) in educationDegrees" :key="i" class="mt-3">
+          <div class="section-info text-sm grey-4">
+            <span class="mr-2">
+              <i class="fa fa-calendar"></i> {{ degree.dateLimits }}
+            </span>
+              <span>
+              <i class="fa fa-map-marker"></i> {{ degree.location }}
+            </span>
+          </div>
+          <h3 class="mt-2">{{ degree.degreeTitle }}</h3>
+          <h4 class="grey-4 mt-1">{{ degree.schoolName }}</h4>
+          <ul class="mt-2">
+            <li v-for="(work, j) in degree.achievements" :key="j" v-html="work"></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- ========================= Hobbies=================================-->
+      
+      <div v-if="showHobbies" class="mt-4">
+        <h2>Hobbies</h2>
+        <div class="flex-row jb mt-3" style="flex-flow: row wrap;">
+          <div
+            v-for="(hobby, i) in hobbies"
+            :key="i"
+            class="hobby flex-column ac js mr-3 mb-3"
+          >
+            <img :src="hobby.image" alt="">
+            <div class="mt-2">{{ hobby.label }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: data,
+    computed: {
+      showHobbies() {
+        return this.hobbies.map(hobby => !hobby.hide).some(show => show);
+      }
+    }
+  });
+</script>
+</body>
+
+</html>
