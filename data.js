@@ -25,7 +25,7 @@ const data = {
       'Designed and developed a single page web application to interface the face analysis API, using <b>Vue</b> and <b>ElementUi</b> (<em>JavaScript</em>, <em>HTML</em>, <em>CSS</em>).',
       'Developed a Python application for license plate recognition based on <b>deep learning</b>, using <b>TensorFlow</b> and <b>OpenCv</b> (<em>Python</em>).',
       'Deployed multiple projects to <b>AWS EC2</b> instances, using <b>Ansible</b> as deployment automation tool.',
-      'Configured and managed <b>Linux severs</b> (Ubuntu, CentOS), including <b>security</b>, <b>databases</b> and <b>web servers</b>.'
+      'Configured and managed <b>Linux servers</b> (Ubuntu, CentOS), including <b>security</b>, <b>databases</b> and <b>web servers</b>.'
   ]}, {
     dateLimits: '09/2017 - 02/2018',
     location: 'Zacatecas, Mexico',
