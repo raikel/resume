@@ -16,18 +16,25 @@
 <body>
 <div id="app">
   <div style="page:portrait" class="section">
-    <div class="header flex-row ac pb-3 mb-5">
-      <img class="avatar mr-4" src="images/avatar.jpeg" alt="avatar">
-      <div>
-        <h1 class="title mb-2 primary">{{ fullName }}</h1>
-        <div class="text-sm">
-        <span class="mr-3">
-          <i class="fa fa-envelope"></i> {{ mailAddress }}
-        </span>
-        <span>
-          <i class="fa fa-calendar"></i> {{ birthDate }}
-        </span>
+    <div class="header flex-row ac jb pb-3 mb-5">
+      <div class="flex-row ac">
+        <img class="avatar mr-4" src="images/avatar.jpeg" alt="avatar">
+        <div>
+          <h1 class="title mb-2 primary">{{ fullName }}</h1>
+          <div class="text-sm">
+            <span class="mr-3">
+              <i class="fa fa-envelope"></i> {{ mailAddress }}
+            </span>
+            <span>
+              <i class="fa fa-calendar"></i> {{ birthDate }}
+            </span>
+          </div>
         </div>
+      </div>
+  
+      <div>
+        <h3 class="title mb-2">Personal Website</h3>
+        <i class="fa fa-globe"></i> <a :href="websiteLink">{{ websiteName }}</a>
       </div>
     </div>
     
