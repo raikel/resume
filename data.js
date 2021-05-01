@@ -4,16 +4,16 @@ const data = {
   birthDate: '14/08/1988',
   websiteLink: 'https://raikel.github.io/portfolio/',
   websiteName: 'raikel.github.io/portfolio',
-  profileSummary: 'Creative software developer dedicated to design and implement high quality, user-friendly and feature-rich software products. Passionate about building things by coding and acquire new skills every day. Strong attention to detail, excellent problem solving skills and ability to work in a fast-paced team environment.',
+  profileSummary: 'Full stack developer dedicated to design and implement high quality, user-friendly and feature-rich software products. Passionate about building things by coding and acquire new skills every day. Strong attention to detail, excellent problem solving skills and ability to work in a fast-paced team environment.',
   workExperience: [{
     dateLimits: '01/2021 - Present',
     location: 'Home Office',
     positionTitle: 'Software Engineer',
     companyName: 'Eva Health',
     workDone: [
-      'Proposed and implemented architectural changes in the Eva Center software that eventually would reduce the downtime due to internet connectivity issues and faults in the communication between devices',
-      'Developed a completely new version of the Eva Center server with API <b>Django</b> and <b>Django REST framework</b> (<em>Python</em>). This API included several services that communicated with hardware devices (smart lights, thermal cameras) and a remote server',
-      'Refactored part of the code that interact with a thermal camera in order to reduce connectivity issues due to connectivity and faults in propietary vendor software. Used <b>Falkon</b> framework at a basic level (<em>Python</em>).',
+      'Proposed and implemented architectural changes in the center software that eventually would reduce the downtime due to internet connectivity issues and faults in the communication between devices',
+      'Developed a completely new version of the center server with API <b>Django</b> and <b>Django REST framework</b> (<em>Python</em>). This API included several services that communicated with hardware devices (smart lights, thermal cameras) and a remote server',
+      'Refactored part of the code that interact with a thermal camera in order to reduce downtime due to connectivity and faults in proprietary vendor software. Used <b>Falkon</b> framework at a basic level (<em>Python</em>).',
       'Developed a small REST API in <b>C++</b> using <b>Crow</b> framework to interface a FLIR thermal camera with the <b>eBUS SDK</b>',
       'Learned React Native and TypeScript in approximately one month and used the acquired skills to refactor two mobile apps in order to adapt them to the proposed architectural changes.',
       'Provided remote support to center managers to solve software and hardware issues, simultaneously to the coding work.',
@@ -21,11 +21,12 @@ const data = {
   ]}, {
     dateLimits: '06/2019 - 01/2021',
     location: 'Zacatecas, Mexico',
-    positionTitle: 'Software Developer',
+    positionTitle: 'Software Engineer',
     companyName: 'Altest',
     workDone: [
-      'Improved software development workflows by promoting development methodologies (scrum, kanban), tools (Git, GitHub, Ansible, web frameworks) and team collaboration.',
-      'Reduced the overall software development cycle time to the half by introducing an <b>API</b> driven architecture, the use of modern <em>JavaScript</em> frameworks like <b>Vue</b> and automated deployment tools, like <b>Ansible</b>.',
+    'Improved software development workflows by promoting development methodologies (scrum, kanban) and tools (Git, GitHub, Ansible) and team collaboration.',
+      'Reduced the overall software development cycle time by introducing an <b>API</b> driven architecture, the use of modern <em>JavaScript</em> frameworks like <b>Vue</b> and automated deployment tools, like <b>Ansible</b>.',
+      'Developed a <b>web scraper</b> to analyze vehicle market data from main online vendors using <b>Scrapy</b> (<em>Python</em>).',
       'Developed a <b>web scraper</b> to analyze vehicle market data from main online vendors using <b>Scrapy</b> (<em>Python</em>).',
       'Developed a <b>REST API</b> web platform for vehicle market analysis from scraped data, using <b>Django</b> and <b>Django REST framework</b> (<em>Python</em>).',
       'Designed and developed a single page web application to interface the vehicle market API, using <b>Vue</b> and <b>Quasar</b> (<em>JavaScript</em>, <em>HTML</em>, <em>CSS</em>).',
@@ -66,11 +67,12 @@ const data = {
     dateLimits: 'In my free time',
     location: 'Anywhere',
     positionTitle: 'Personal/Hobby projects',
-    companyName: 'I like to solve problems with code',
+    companyName: 'I like to solve problems by coding',
     workDone: [
       'Developed a stock market analysis tool which has helped me to see better long-term investment opportunities, based on public Yahoo financial data. Used <b>Django</b> (<em>Python</em>) for this project',
       'Tried to develop a crypto currency forecasting tool based on Deep Learning (RNN and DQN), using <b>Pytorch</b> (<em>Python</em>) as deep learning framework. It did\' work',
       'Developed a tool to increase the odds of winning a trivia game (Confetti from Facebook). Used OCR in mobile app to get the question and possible answers from the phone screen and send it to an API (developed in Node with <b>Express</b>), which scraped and ranked the possible answers from Google (using <b>Chrome Puppeteer</b>). Me and my family won around a dozen of games using this tool.',
+      'Wrote this resume using <b>Vue</b> (<em>JavaScript</em>, <em>HTML</em>, <em>CSS</em>). Available <a href="https://github.com/raikel/resume">here</a>',
     ]
   }],
   researchWork: {
